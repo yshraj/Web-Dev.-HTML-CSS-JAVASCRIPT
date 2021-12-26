@@ -1,0 +1,209 @@
+
+<html>
+<title>7</title>
+<style>
+body {
+  background-color:lightgray;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl" ng-init="myCol='black';myColh='white';myCol2='black';pi='Personal Information';edu='Educational Background'">
+<h2>Enter your data to create your resume:</h2><hr>
+<table style="width:100%;border=1;">
+<tr>
+<th align="left">
+<h3>Enter your <span ng-bind="pi"></span> : </h3></th>
+<th align="left">
+<h3>Enter your details related <span ng-bind="edu"></span> : </h3></th>
+<th align="left">
+<h3>Enter your Skills : </h3></th>
+<th align="left">
+<h3>Enter your Hobbies : </h3></th>
+</tr>
+<tr>
+		<td><label style="padding-right: 76px;">Name :  </label> <input ng-model="name">
+	<td><label style="padding-right: 35px;">Year of passing SSC:  </label> <input ng-model="yssc">
+<td><label>Skill 1 :  </label> <input ng-model="s1">
+<td><label>Hobby 1 :  </label> <input ng-model="h1">
+	</tr>
+	<tr>
+		<td><label style="padding-right: 43px;">Nationality : </label><input ng-model="nationality">
+	<td><label style="padding-right: 35px;">Year of passing HSC:  </label> <input ng-model="yhsc">
+<td><label>Skill 2 :  </label> <input ng-model="s2">
+<td><label>Hobby 2 :  </label> <input ng-model="h2">
+	</tr>
+	<tr>
+		<td><label style="padding-right: 32px;">Date of Birth : </label><input ng-model="dob">
+<td><label style="padding-right: 25px;">Year of passing B.tech:  </label> <input ng-model="ybtech">
+<td><label>Skill 3 :  </label> <input ng-model="s3">
+<td><label>Hobby 3 :  </label> <input ng-model="h3">
+	</tr>
+	<tr>
+		<td><label style="padding-right: 62px;">Religion : </label><input ng-model="religion">
+<td><label style="padding-right: 14px;">Percentage/Grade (SSC):  </label> <input ng-model="pgssc">
+<td><label>Skill 4 :  </label> <input ng-model="s4">
+<td><label>Hobby 4 :  </label> <input ng-model="h4">
+	</tr>
+	<tr>
+		<td><label style="padding-right: 80px;">Caste : </label><input ng-model="caste">
+<td><label style="padding-right: 10px;">Percentage/Grade (HSC):  </label> <input ng-model="pghsc">
+	</tr>
+	<tr>
+		<td><label>Languages known : </label><input ng-model="lan">
+<td><label>Percentage/Grade (B.tech):  </label> <input ng-model="pgbtech">
+	</tr>
+	<tr>
+		<td valign="top"><label style="padding-right: 65px;">Address : </label><input ng-model="add">
+<td><label style="padding-right: 87px;">Board (SSC):  </label> <input ng-model="bssc">
+	</tr>
+	<tr>
+		<td><label style="padding-right: 76px;">Phone : </label><input ng-model="ph">
+<td><label style="padding-right: 83px;">Board (HSC):  </label> <input ng-model="bhsc">
+	</tr>
+	<tr>
+		<td valign="top"><label style="padding-right: 77px;">Email : </label><input ng-model="email">
+<td><label style="padding-right: 60px;">Institution (SSC):  </label> <input ng-model="issc">
+	</tr>
+<tr>
+		<td valign="top">  
+<td><label style="padding-right: 58px;">Institution (HSC):  </label> <input ng-model="ihsc">
+	</tr>
+<tr>
+		<td valign="top">  
+<td><label style="padding-right: 48px;">Institution (B.tech):  </label> <input ng-model="ibtech">
+	</tr>
+</table>
+<hr><br><label style="padding-right: 80px;">The font color of the input box will be whatever you write in the input field : </label><input ng-model="myCol"></input><br><br>
+<label style="padding-right: 25px;">The heading font color of the input box will be whatever you write in the input field : </label><input ng-model="myColh"></input><br><br>
+<label>The background font color of the input box will be whatever you write in the input field : </label><input ng-model="myCol2"></input><br><br><hr>
+<h1 style ="text-align:center;color:{{myCol2}}">RESUME</font></b></h1>
+<h3 style="background-color:{{myCol2}};color:{{myColh}}" ng-model="myCol2"><span ng-bind="pi"></span></h3>
+<table style="padding:15px; border=1;color:{{myCol}}">
+	<tr>
+		<td>Name
+		<td>:
+		<td>{{name}}
+	</tr>
+	<tr>
+		<td>Nationality
+		<td>:
+		<td>{{nationality}}
+	</tr>
+	<tr>
+		<td>Date of Birth
+		<td>:
+		<td>{{dob}}
+	</tr>
+	<tr>
+		<td>Religion
+		<td>:
+		<td>{{religion}}
+	</tr>
+	<tr>
+		<td>Caste
+		<td>:
+		<td>{{caste}}
+	</tr>
+	<tr>
+		<td>Languages known
+		<td>:
+		<td>{{lan}}
+	</tr>
+	<tr>
+		<td valign="top">Address
+		<td valign="top">:
+		<td>{{add}}
+	</tr>
+	<tr>
+		<td>Phone
+		<td>:
+		<td>{{ph}}
+	</tr>
+	<tr>
+		<td valign="top">E-mail
+		<td valign="top">:
+		<td>{{email}}
+	</tr>
+</table>
+<h3 style="background-color:{{myCol2}};color:{{myColh}}" ng-model="myCol2"><span ng-bind="edu"></span></h3>
+<table style="width:80%; padding:15px; border=1;color:{{myCol}}">
+	<tr>
+		<th align="left">Degree/Qualification
+		<th align="left">Year
+		<th align="left">Percentage/Grade
+		<th align="left">Board
+		<th align="left">Institution
+	</tr>
+	<tr>
+		<td>SSC
+		<td>{{yssc}}
+		<td>{{pgssc}}
+		<td>{{bssc}}
+		<td>{{issc}}
+	</tr>
+	<tr>
+		<td>HSC
+		<td>{{yhsc}}
+		<td>{{pghsc}}
+		<td>{{bhsc}}
+		<td>{{ihsc}}
+	</tr>
+	<tr>
+		<td>B.Tech (CSE)
+		<td>{{ybtech}}
+		<td>{{pgbtech}}
+		<td>-
+		<td>{{ibtech}}
+	</tr>
+</table>
+<h3 style="background-color:{{myCol2}};color:{{myColh}}" ng-model="myCol2">Skills</h3>
+<ul style="color:{{myCol}}">
+	<li>{{s1}}
+	<li>{{s2}} 
+	<li>{{s3}}
+	<li>{{s4}}
+</ul>
+<h3 style="background-color:{{myCol2}};color:{{myColh}}" ng-model="myCol2">Hobbies</h3>
+<ul style="color:{{myCol}}">	
+	<li>{{h1}}
+	<li>{{h2}}
+	<li>{{h3}}
+	<li>{{h4}}
+</ul>
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+  $scope.name = "Priyal Dalwadi";
+ $scope.nationality = "Indian";
+ $scope.dob = "26th April,2002";
+ $scope.religion = "Hindu";
+ $scope.caste= "Hindu Prajapati";
+$scope.lan= "Gujarati, Hindi, English";
+$scope.add= "50, Rajratna Society, Nr. Gauri Cinema, Rajendrapark Cross Road, Odhav, Ahmedabad - 382415.";
+$scope.ph= "+91 9328064007";
+$scope.email="priyaldalwadi88@gmail.com";
+$scope.yssc="2016-17";
+$scope.yhsc="2018-19";
+$scope.ybtech="2019-till date";
+$scope.pgssc="A2";
+$scope.pghsc="A2";
+$scope.pgbtech="-";
+$scope.bssc="GSEB";
+$scope.bhsc="GSHSEB";
+$scope.issc="Diwan Ballubhai Secondary School";
+$scope.ihsc="Diwan Ballubhai Higher Secondary School";
+$scope.ibtech="Institute of Technology, Nirma University";
+$scope.s1="Teamwork"
+$scope.s2="Creativity"
+$scope.s3="Knowledge of Computer Languages such as : C,C++,Java,Python"
+$scope.s4="Problem Solving"
+$scope.h1="Singing"
+$scope.h2="Listening retros"
+$scope.h3="Travelling"
+$scope.h4="Photography"
+});
+</script>
+</body>
+</html>

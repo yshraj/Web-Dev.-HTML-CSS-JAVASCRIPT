@@ -1,0 +1,117 @@
+<html>  
+<head>  
+	<title>
+
+			6B:Create a JavaScript that merges two arrays without duplicating elements.
+
+		</title>
+	<style>
+	  button{
+    padding: 16px;
+    font-family: "Times New Roman";
+    font-size: 26px;
+    color: background-color: white ; ;
+    background-color:#d3d3d3 ;
+    cursor: pointer;
+    border: 2;
+    border-radius: 26px;
+    
+  }
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  button:hover{
+    background-color: white ;
+  }
+
+	box {
+    padding: 12px;
+    width: 55%;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 0;
+  }
+
+
+ .box
+    {
+      width: 96%;
+	
+      border: 5px solid #b39800;
+      padding: 25px;
+    }
+    .box:hover
+    {
+border: 3px solid #b39800;
+      -moz-box-shadow: 0 0 25px #ccc;
+      -webkit-box-shadow: 0 0 25px #ccc;
+      box-shadow: 0 0 25px #ccc;
+    }
+    input {  
+  background-color: sky blue ;  	
+  width: 40%;  
+  padding: 10px;
+     
+}
+
+
+
+</style>
+</head>  
+<body style = "background: url(qq12.jpeg); font-size: 15px; text-align: center;">  
+<br><br>
+	<H2>
+6B:Create a JavaScript that merges two arrays without duplicating elements.	<BR><BR>	
+</H2>
+<br><br>
+
+
+<h1>To merge two arrays without duplicating elements,</h1>  
+<p style="font-size: 20px;">Enter elements of array 1 (separated by comma(,)) : <input id = "arr1" type = "text" size="30"> 
+<br>
+<p style="font-size: 20px;">Enter element of array 2 (separated by comma(,)) : <input id = "arr2" type = "text" size="30"> 
+<br><br>  
+<button id="btn" onclick = "fun1()" style="font-size: 20px;">Click to get answer</button>  
+<p id="res" style="font-size: 20px;"><p>
+<script>  
+function fun(a1,a2)   
+{  
+	var a3=[];
+	for(var i=0;i<a1.length;i++)
+	{
+		if(a3.indexOf(a1[i])==-1)
+		{
+			a3.push(a1[i])
+		}
+	}
+	for(var i=0;i<a2.length;i++)
+	{
+		if(a3.indexOf(a2[i])==-1)
+		{
+			a3.push(a2[i])
+		}
+	}
+	return a3;
+}  
+function fun1()  
+{
+var array1 = document.getElementById("arr1").value;  
+var a1 = array1.split(",")
+var array2 = document.getElementById("arr2").value; 
+var a2 = array2.split(",")
+var a3 = fun(a1,a2)
+document.getElementById("res").innerHTML= "Elements of array 1 is : " +a1+ "<br><br>Elements of array 2 is : " +a2+ "<br><h3>Elements of merged array is : " +a3;
+
+
+document.getElementById("arr1").value="";
+document.getElementById("arr2").value="";
+
+}  
+</script>  
+</body>  
+</html> 
+</script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<html>
+
+<head>
+
+<title>
+
+FORM IN HTML
+
+</title>
+
+<script type="text/JavaScript">
+function add()
+{
+
+var a=5;
+var b=7;
+var c;
+c=a+b;
+window.alert(c);
+
+}
+
+function p_name()
+{
+
+
+document.getElementById("name").value=window.prompt("Enter your Name");
+
+window.alert("NAME:"+document.getElementById("name").value);
+
+
+var arr=[10,20,23,22];
+alert("LENGTH OF ARRAY IS"+arr.length);
+
+for(i=0;i<arr.length;i++)
+{
+alert("value at index "+i+"is"+arr[i]);
+}
+
+}
+
+
+
+
+
+function verify()
+{
+return window.confirm('Are you sure that you want to submit');
+}
+
+
+
+
+function modify()
+{
+
+para.innerHTML="The paragraph is changed!!";
+}
+function resore()
+{
+
+para.innerHTML="This is original!!";
+
+}
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+</script>
+
+
+
+</head>
+
+
+<body onload="p_name();">
+
+
+
+
+
+
+
+
+
+<p id="para" onMouseOver="modify();" onMouseOut="resore();">This is original!!</p>
+
+<form name = "myform1" id="f1" method="" action="">
+
+
+
+
+<label> NAME: </label>
+<br>
+<input type = "text" id="name" value="ENTER NAME" maxlength="10" name="uname" size="30" onblur="p_name();"><br>
+<BR>
+
+
+
+ADRESS:<BR>
+<textarea name="adress" >
+</textarea>
+<br>
+<br>
+
+
+PASSWORD:
+<br>
+<input type = "password" maxlength="8" name="password">
+<br>
+<br>
+
+
+
+Select one option:<br>
+<input type="radio" name="o1" value="op1">OPTION 1:
+<input type="radio" name="o1" value="op2" checked>OPTION 2:
+
+<!-- if name is same then we can select only one option otherwise we can select many -->
+
+
+<BR>
+<BR>
+<BR>
+GAMES I LOVE:<br>
+<input type="checkbox" name="c1" value="g1">:GAME1
+<BR>
+<input type="checkbox" name="c1" value="g2" checked>:GAME2
+<BR>
+<input type="checkbox" name="c1" value="g3">:GAME3
+<BR>
+<BR>
+
+
+
+MOVIES YOU LIKE:
+<BR>
+<select name="GAMES">
+<option value="GAME1">HERA PHERI</option>
+<option value="GAME2">DHOL</option>
+<option value="GAME3">DARK KNIGHT</option>
+</SELECT>
+<BR>
+<BR>
+
+
+<br>
+<input type="button" name="button" value="Button"   onclick="verify();">
+
+</form>
+</body>
+
+
+
+
+</html>

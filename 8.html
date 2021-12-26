@@ -1,0 +1,187 @@
+
+<html> 
+<title>8</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script><script>
+    let saveFile = () => {
+    	
+        // Get the data from each element on the form.
+    	const app = document.getElementById('app');
+        
+        let data = 
+            '1. Name of the applicant : ' + app.value + ' \r\n\n' +
+	'2. Aadhar Card Number : ' +num.value + ' \r\n\n' +
+'3. Name of Branch in which admitted : ' +branch.value + ' \r\n\n'+
+'4. Date of Birth : ' +bday.value + ' \r\n\n' +
+'5. Birth Place : ' +bp.value + ' \r\n\n' + 
+'6. Age : ' +age.value + ' \r\n\n' +
+'7. Nationality : ' +nationality.value + ' \r\n\n' +
+'8. Religion : ' +religion.value + ' \r\n\n' +
+'9. Address : ' +address.value + ' \r\n\n' +
+'10. Mobile(Student) : ' +cc1.value + ' ' +m1.value+ ' \r\n\n'+
+'11. Mobile(Parent) : ' +cc2.value + ' ' +m2.value+ ' \r\n\n' +
+'12. Email ID (Student) : ' +email.value+  '\r\n\n' +
+'13. Email ID (Parent) : ' +emailp.value+  '\r\n';
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'formData.txt';	   
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+        newLink.click(); 
+    }
+</script>
+<body style="background-color:LightGrey;">
+<div ng-app="">
+<h1 align="center"><u>Institue of Technology, Nirma University</u></h1> 
+<h2 align="center"><u>Student registration form</u></h1> 
+<br> 
+<form> 
+<ol> 
+<h3><li><label id="na"> Name of the Applicant: </label>
+<input type="text" ng-model="app" id="app" size="80" style="text-transform:uppercase"> </h3> 
+Note : In Block Letters as par marksheet of last school / college attended <br> </li> 
+<h3><li><label>Aadhar Card Number : </label> 
+<input type="text" ng-model="num" id="num" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="12" size="13"></h3> 
+Note: Please enter only numbers otherwise it won't accept <br> </li> 
+<h3><li>Name of Program : 
+<select id="course" ng-model="course"> 
+<option value="1">B.Tech</option> 
+<option value="2">B.Tech(DtoD)</option> 
+<option value="3">M.Tech</option> 
+<option value="4">M.Tech(By Research)</option> 
+<option value="5">M.C.A.</option> 
+<option value="6">M.C.A.(Lateral)</option> 
+<option value="7">Ph.D.</option> 
+</select></h3> 
+</li> 
+<h3><li><label> Name of Branch in which admitted : </label> 
+<input type="text" size="80" id="branch" ng-model="branch"><br><br> 
+<label> Speciallization (in case of M.Tech /Ph.D.) : </label> 
+<input type="text" size="73" > </h3></li> 
+
+<h3><li><label> 
+Gender : 
+</label></h3> 
+<input type="radio" id="gender" ng-model="gender" value="male">Male<br> 
+<input type="radio" id="gender" ng-model="gender" value="female">Female <br> 
+<input type="radio" id="gender" ng-model="gender" value="other">Other
+<br> </li> 
+<h3><li><label>Date of Birth :</label> 
+<input type="text" id="bday" ng-model="bday"></li></h3> 
+<h3><li> <label> Birth Place : </label> 
+<input type="text" id="bp" ng-model="bp" size="15"/></li></h3> 
+<h3><li><label for="age">Age : </label> 
+<input type="text" id="age" ng-model="age"></h3></li> 
+<h3><li> <label> Nationality : </label> 
+<input type="text" id="nationality" ng-model="nationality" size="15"/></li></h3> 
+<h3><li> <label> Religion : </label> 
+<input type="text" id="religion" ng-model="religion" size="15"/></li></h3> 
+<h3><li>Caste : 
+<select id="caste" ng-model="caste"> 
+<option value="1c">OPEN</option> 
+<option value="2c">SEBC</option> 
+<option value="3c">SC</option> 
+<option value="4c">ST</option> 
+</select></h3> 
+</li> 
+<h3><li> Medium of Instruction of study in previous School/College : <select id="med" ng-model="med"> 
+<option value="m1">ENGLISH</option> 
+<option value="m2">GUJARATI</option> 
+<option value="m3">HINDI</option> 
+</select></h3>Specify if any other : <input type="text" size="10"> </li> 
+<h3><li>Applicant's Full Address (Permanent - in block letters only) : <br><br> 
+<textarea cols="80" rows="5" id="address" ng-model="address" style="text-transform:uppercase"> 
+</textarea></li></h3> 
+<h3><li>Contact Nos.:- <br><br></li> 
+Mobile(Student) : <input type="text" id="cc1" ng-model="cc1" value="+91" size="2"/> 
+<input type="text" id="m1" ng-model="m1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' size="10" maxlength="10" > <br> <br> 
+Mobile(Parent) : <input type="text" id="cc2" ng-model="cc2" value="+91" size="2"/> 
+<input type="text" id="m2" ng-model="m2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' size="10" maxlength="10" > 
+<br> <br> 
+<li>E-mail ID (Student) : <input type="text" id="email" ng-model="email" size="25" placeholder="19BCE000@nirmauni.ac.in"></li><br> 
+E-mail ID (Parent) : <input type="text" id="emailp" ng-model="emailp" size="25"> 
+<br> <br> 
+
+</form>
+<hr></h3>
+<p style="font-size:30px;">Hello, "{{app | uppercase}}". Thank you for filling out this form. Please check your details once before submitting the form.</p>
+<ul style="font-size:20px;">
+<li>Name of the applicant : {{app | uppercase}}<br><br>
+<li>Aadhar Card Number : {{num | number:0}}<br><br>
+<li>Name of Program : <div ng-switch="course" style="display: inline-block;"><div ng-switch-when="1">   B.Tech
+  </div>
+<div ng-switch-when="2">
+     B.Tech(DtoD)
+  </div>
+<div ng-switch-when="3">
+     M.Tech
+  </div>
+<div ng-switch-when="4">
+     M.Tech(By Research)
+  </div>
+<div ng-switch-when="5">
+    M.C.A.
+  </div>
+<div ng-switch-when="6">
+    M.C.A.(Lateral)
+  </div>
+<div ng-switch-when="7">
+    Ph.D.
+  </div>
+</div>
+<br><br>
+<li> Name of Branch in which admitted : {{branch}}<br><br>
+<li> Gender : <div ng-switch="gender" style="display: inline-block;">
+  <div ng-switch-when="male">
+Male
+  </div>
+  <div ng-switch-when="female">
+Female
+  </div>
+  <div ng-switch-when="other">
+Other
+  </div>
+</div>
+<br><br><li>Date of Birth : {{bday}}
+<br><br><li>Birth Place : {{bp}}
+<br><br><li>Age : {{age | number:0}}
+<br><br><li>Nationality : {{nationality}}
+<br><br><li>Religion : {{religion}}<br><br>
+<li>Caste : <div ng-switch="caste" style="display: inline-block;"><div ng-switch-when="1c">OPEN 
+  </div>
+<div ng-switch-when="2c">
+     SEBC
+  </div>
+<div ng-switch-when="3c">
+    SC
+  </div>
+<div ng-switch-when="4c">
+     ST
+  </div>
+</div><br><br>
+<li>Medium of Instruction of study in previous School/College : <div ng-switch="med" style="display: inline-block;"><div ng-switch-when="m1">ENGLISH
+  </div>
+<div ng-switch-when="m2">
+     GUJARATI
+  </div>
+<div ng-switch-when="m3">
+    HINDI
+  </div>
+</div><br><br>
+<li>Applicant's Full Address (Permanent - in block letters only) :<br>{{address | uppercase}}<br><br>
+<li>Contact Nos.:-
+<br><br>Mobile(Student) : {{cc1 | number:0}} {{m1}}
+<br><br>Mobile(Parent) : {{cc2 | number:0}} {{m2}}<br><br>
+<li>Email ID (Student) : {{email | lowercase}}<br><br>Email ID (Parent) : {{emailp | lowercase}}<br><br>
+</ul><hr>
+</div><p style="padding-left:60px;">
+<button type="submit" style="font-size:20px;" value="Submit" onclick="saveFile()">Submit</button>
+<input type="reset"  style="font-size:20px;" > 
+</body> 
+</html>

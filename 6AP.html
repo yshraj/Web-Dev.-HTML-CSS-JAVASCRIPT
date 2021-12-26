@@ -1,0 +1,91 @@
+<html>
+<head>
+<style>
+	  button{
+    padding: 16px;
+    font-family: "Times New Roman";
+    font-size: 26px;
+    color: background-color: white ; ;
+    background-color:#d3d3d3 ;
+    cursor: pointer;
+    border: 2;
+    border-radius: 22px;
+    
+  }
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  button:hover{
+    background-color: white ;
+  }
+
+	box {
+    padding: 12px;
+    width: 55%;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 0;
+  }
+
+
+ .box
+    {
+      width: 96%;
+	
+      border: 5px solid #b39800;
+      padding: 25px;
+    }
+    .box:hover
+    {
+border: 3px solid #b39800;
+      -moz-box-shadow: 0 0 25px #ccc;
+      -webkit-box-shadow: 0 0 25px #ccc;
+      box-shadow: 0 0 25px #ccc;
+    }
+    input {  
+  background-color: #b39800 ;  	
+  width: 40%;  
+  padding: 10px;
+     
+}
+
+
+
+</style>
+</head>
+
+<body style=" background: url(qq12.jpeg) no-repeat center fixed;">  
+	<div class="box">
+<center>
+<h2>6a. Write a JavaScript function that read an integer value and finds the
+factorial of the entered number.</h2>	<br>
+<h1>To find factorial of any number,</h1>  
+
+<p style="font-size: 23px;">Enter a number:<br> <input id = "number"> </p>
+<br><br>  
+<button id="btn" onclick = "fact1()" style="font-size: 20px;">Click here to get FACTORIAL</button>  
+<br><br><br>  <div class="box">
+<p id="res" style="font-size: 30px;background-color: white;"></p>
+</div>
+<br>
+<script>  
+function fact(num)   
+{  
+if (num == 0) {  
+return 1;  
+}  
+else {  
+return num * fact( num - 1 );  
+}  
+}  
+function fact1()  
+{  
+var num = document.getElementById("number").value;  
+var f = fact(num);   
+alert(document.getElementById("res").innerHTML="ANS  "+ num + "! = " + f )
+}  
+</script> </center> </div>
+</body>  
+</html>

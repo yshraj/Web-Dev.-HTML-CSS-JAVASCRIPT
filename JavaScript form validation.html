@@ -1,0 +1,364 @@
+<html>
+<head>
+<title>
+
+STUDENT REGISTRATION FORM
+
+</title>
+
+<style>
+body {
+  background-repeat: no-repeat, repeat;
+  background-color: #cccccc;
+}
+
+
+.container {  
+    padding: 50px;  
+ background-color:#fff5d7;
+ background-image: url("qq12.jpeg");
+
+}  
+h1 { font-family: "Times New Roman";
+font-size: 50px;}
+
+label { font-family: "Times New Roman";
+font-size: 17px;}
+
+input[type=text], input[type=password], textarea {  
+  width: 90%;  
+  padding: 5px;
+     
+}
+
+input[type=number], input[type=password], textarea {  
+width: 80%;  
+  padding: 8px;
+     
+}
+
+input[type=email], input[type=password], textarea {  
+width: 80%;  
+  padding: 8px;
+     
+} 
+
+input[type=DATE], input[type=password], textarea {  
+ width: 80%;  
+  padding: 8px;
+     
+     
+}   
+input[type=tel], input[type=password],textarea {  
+  width: 80%;  
+  padding: 8px;
+     
+     
+}
+
+
+
+input[type=submit]{  
+  background-color: #4CAF50;    
+  padding: 10px;    
+  width: 80%;    
+}  
+
+
+
+.l
+{
+  outline: 2px solid red;
+}
+.w
+{
+  outline: white;
+}
+
+</style>  
+</head>  
+
+
+<script> 
+
+
+function a()
+{
+window.alert("THANK YOU FOR FEEDBACK: MR./MS. "+document.getElementById("n").value);
+}
+
+
+function validateform()
+{  
+
+var alphaExp = /^[a-zA-Z]+$/;
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+var name2=document.myform.middlename.value;
+var name3=document.myform.lastname.value; 
+if (name==null || name==""){  
+  
+document.getElementById("n").classList.add("l");
+alert("Name can't be blank");
+  return false;  
+}
+else
+{
+document.getElementById("n").classList.add("w");
+
+}
+
+if (name2==null || name2==""){  
+  document.getElementById("n1").classList.add("l");
+  alert(" Middle Name can't be blank");  
+  return false;  
+}
+else
+{
+document.getElementById("n1").classList.add("w");
+
+}
+
+if (name3==null || name3==""){  
+  document.getElementById("n2").classList.add("l");
+  alert("LAST Name can't be blank");  
+  return false;  
+}
+else
+{
+document.getElementById("n2").classList.add("w");
+
+}
+
+
+var l=alphaExp.test(name);
+if (l==false) {
+        alert(" FIRST NAME Invalid characters");
+        document.myForm.name.focus();
+        //return false;
+
+
+    }
+   
+
+var l1=alphaExp.test(name2);      
+if (l1==false) {
+  alert(" MIDDLE NAME Invalid characters");
+        document.myForm.middlename.focus();
+        return false;
+       
+    }
+    
+
+var l2=alphaExp.test(name3);      
+if (l2==false) {
+         alert(" LAST NAME Invalid characters");
+        document.myForm.lastname.focus();
+        return false;
+
+    }
+   
+
+var le=/^[A-Za-z]+$/;
+var num=/^[0-9]+$/;
+
+var a=document.getElementById('email1').value.split('@');
+var q1=num.test(a[0].slice(0,2));
+var q2=le.test(a[0].slice(2,5));
+var q3=num.test(a[0].slice(5,8));
+
+if(!q1 || !q2 || !q3)
+{
+
+  alert("Email should be in the form of DDCCCDDD@nirmauni.ac.in, where D and C represent any digit and letter, respectively");
+  
+}
+
+
+ var co=/^[A-Za-z0-9]+$/;
+var a1=document.getElementById('pwd1').value;
+var a2=document.getElementById('pwd2').value;
+
+var op=co.test(a1);
+
+if (a1.length<8) 
+{
+  alert("Password must be a minimum of eight characters long");
+}
+if (!co.test(a1)) 
+{
+
+alert("Password must consisting of a combination of uppercase letter, lowercase letter, and digits.");  
+}
+if (a1!=a2) 
+{
+  alert("Password and re-type password must be the same.");
+}
+
+
+
+//else if(password.length<6){  
+ // alert("Password must be at least 6 characters long.");  
+  //return false;  
+  //}  
+return a();  
+}  
+</script>  
+
+
+
+
+<body> 
+
+
+<form name="myform" onsubmit="return validateform()" >  
+
+	 <div class="container">
+  <center>  <h1> Student Registeration Form</h1> </center><br>  
+  <hr color="white"> <br>
+ 
+<!--<fieldset style="border-color:white">
+    <legend> ENTER NAME: </legend>
+-->
+<BR> 
+<label> ENTER NAME:<br></label> 
+<label> Firstname<br> </label>
+<input id="n" type="text" name="name"><br/> 
+
+
+<br>
+<br>   
+<label> Middlename:<br> </label>   
+
+<input type="text" id="n1" name="middlename" placeholder="Middlename">   
+<br>
+<br>
+<label> Lastname:<br> </label>    
+<input type="text" id="n2" name="lastname" placeholder="Lastname">   
+<div>  
+<br>
+
+<br>
+
+
+
+
+
+<br><br>
+
+
+    <!--
+<button type="submit" style="background-color: #F1B814;padding: 16px;width: 100%;">
+
+<font face = "Times New Roman" size = "4">
+R e g i s t e r</font>
+</button>
+<br><br>-->
+
+<br><label><b>Roll No:<br></b></label>  
+ <input type="text" placeholder="Enter Roll Number" name="rn"> <br>
+
+
+<BR> 
+<label> Adhar Card No:<br></label> <BR>
+<!--
+<input type="number" name="ADNO" placeholder= "ADHAR CARD NUMBER" max="999999999999"/>
+-->
+<input type="number" placeholder= "ADHAR CARD NUMBER" min="9999" max="9999999999">
+<br>
+
+
+<BR>
+
+
+  <label for="BDAY">Birth Date:<br></label><BR>
+  <input type="date" id="datemax" name="datemax" max="2010-12-31"><br><br>
+
+
+<br><label><b>Email<br></b></label>  
+ <input type="email" id="email1" placeholder="Enter Email Address" name="email"> <br>
+
+<br>  
+<label>   
+Phone :  <br>
+</label>
+
+<input type="tel" id="phone" name="phone" placeholder="phone no." pattern="[0-9]{10}">   
+
+<br><br><label>   
+Course :  
+</label>   
+<br>
+<select>  
+<option value="Course">Course</option>  
+<option value="BCA">BCA</option> 
+<option value="BCOM">BCA</option>
+<option value="CA">BCA</option> 
+<option value="BBA">BBA</option>  
+<option value="CS">BCA</option>
+<option value="B.Tech">B.Tech</option>  
+<option value="MBA">MBA</option>  
+<option value="MCA">MCA</option>  
+<option value="M.Tech">M.Tech</option>  
+</select>  
+</div>  
+<div>  <br>
+
+<label>   
+Gender :  <br>
+</label><br>  
+<input type="radio" value="Male" name="gender" checked > Male   
+<input type="radio" value="Female" name="gender"> Female   
+<input type="radio" value="Other" name="gender"> Other  
+  
+</div>
+<br>  
+Current Address : <br> 
+<textarea cols="80" rows="5" placeholder="Current Address" value="address">  
+</textarea>  
+ <br>
+ 
+  
+  
+  <!--
+<br>  <label><b>Password</b></label>  
+    <input type="password12" id="pw" placeholder="Enter Password"><br><br>  
+  
+    <label><b>Re-type Password</b></label>  <br>
+
+    <input type="password122" placeholder="Retype Password"> <br> <br>
+
+-->
+
+
+
+<button type="reset" onclick="alert('RESET')" style="background-color: #F84D03 ;padding: 13px;width: 80%;">
+
+<font face = "Times New Roman" size = "3">
+R E S E T</font>
+</button>
+<br><br>
+
+
+
+
+
+
+
+<b><p style="color: white">Password:</p></b> <input type="password" id="pwd1" name="password"><br>
+<b><p style="color: white">Re-type Password:</p></b><br><input type="password" id="pwd2" name="password">
+
+<br/>  
+<br> 
+<input type="submit" value="register">  
+
+
+
+
+</BR></div>
+</form>  
+
+</body>
+</html>
+
+ 

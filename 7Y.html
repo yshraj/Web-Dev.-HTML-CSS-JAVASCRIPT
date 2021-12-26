@@ -1,0 +1,424 @@
+
+
+<!--
+-->
+<html>
+<title>7</title>
+<style>
+	
+body {
+
+	background-repeat: repeat;
+	background-image: url("mn.jpeg");
+	background-attachment:  fixed;
+  padding: 1em;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  // font-size: 1vw;
+  color: @grey-dark;
+  
+}
+
+.container {  
+    padding: 40px;  
+align-items: center;
+ background-image: url("mn.jpg");
+ 
+ max-width: 42em;
+  padding: 1em 3em 2em 3em;
+  margin: 3em auto;
+  background-color: @white;
+  border-radius: @br * 1.6;
+  box-shadow: 1px 3px 12px -2px rgba(0,0,0,0.2);
+
+}  
+h1 { font-family: "Times New Roman";
+font-size: 55px;}
+
+label { font-family: "Times New Roman";
+font-size: 24px;}
+
+input[type=text], input[type=password], textarea {  
+ width: 100%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: @grey-lightest;
+  border: 1px solid @grey;
+  border-radius: 3px;
+     
+     
+}
+
+input[type=number], input[type=password], textarea {  
+width: 100%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: @grey-lightest;
+  border: 1px solid @grey;
+  border-radius: 3px;
+     
+     
+}
+
+input[type=email], input[type=password], textarea {  
+ width: 100%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: @grey-lightest;
+  border: 1px solid @grey;
+  border-radius: 3px;
+     
+} 
+
+input[type=DATE], input[type=password], textarea {  
+width: 100%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: @grey-lightest;
+  border: 1px solid @grey;
+  border-radius: 3px;
+     
+
+}   
+input[type=tel], input[type=password],textarea {  
+  width: 100%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: @grey-lightest;
+  border: 1px solid @grey;
+  border-radius: 3px;
+     
+     
+     
+}
+
+
+
+input[type=submit]{  
+ width: 100%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: @grey-lightest;
+  border: 1px solid @grey;
+  border-radius: 3px;
+       
+}  
+
+
+
+.l
+{
+  outline: 2px solid red;
+}
+.w
+{
+  outline: white;
+}
+
+
+table.paleBlueRows {
+  font-family: "Times New Roman", Times, serif;
+  border: 2px solid #FFFFFF;
+  width: 560px;
+  height: auto;
+  text-align: center;
+ border-collapse: collapse;
+}
+table.paleBlueRows td, table.paleBlueRows th {
+  border: 1px solid #FFFFFF;
+  padding: 5px 4px;
+}
+table.paleBlueRows tbody td {
+  font-size: 17px;
+}
+
+table.paleBlueRows thead {
+  background: #0B6FA4;
+  border-bottom: 5px solid #FFFFFF;
+}
+table.paleBlueRows thead th {
+  font-size: 17px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #FFFFFF;
+}
+table.paleBlueRows thead th:first-child {
+  border-left: none;
+}
+
+table.paleBlueRows tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  background: #D0E4F5;
+  border-top: 3px solid #444444;
+}
+table.paleBlueRows tfoot td {
+  font-size: 17px;
+}
+
+/*body {
+	background-repeat: no-repeat;
+	background-image: url("qq12.jpeg");
+	background-attachment:  fixed;
+
+}
+h3 { font-family: "Times New Roman";
+font-size: 26px;}
+
+label { font-family: "Times New Roman";
+font-size: 21px;}
+
+.container {  
+    padding: 50px;  
+ background-color:#fff5d7;
+
+ background-image: url("qq12.jpeg");
+
+}  
+
+
+	box {
+    padding: 12px;
+    width: 55%;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 0;
+  }
+
+
+ .box
+    {
+      width: 96%;
+	
+      border: 5px solid #b39800;
+      padding: 25px;
+    }
+    .box:hover
+    {
+border: 3px solid #b39800;
+      -moz-box-shadow: 0 0 25px #ccc;
+      -webkit-box-shadow: 0 0 25px #ccc;
+      box-shadow: 0 0 25px #ccc;
+    }
+
+
+input {  
+  width: 86%;  
+  padding: 6px;
+  align-items: right;
+     
+}*/
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+	<div class = "container" style="width:550px">
+<div ng-app="myApp" ng-controller="myCtrl"
+ng-init="myCol='black';myColh='white';myCol2='black';
+pi='Information';edu='Educational Background'">
+<h2>Data entered by you will genrate Resume at bottom:</h2><hr>
+<!--<table style="width:100%;border=2;">
+
+
+<tr>
+<th >-->
+<h3>Enter <span ng-bind="pi"></span> : <br></h3><br><br>
+
+
+
+<label style="padding-right: 76px;">Name :  </label> <input ng-model="name"><br><br>
+
+
+
+
+<br><label>Roll No:</label>  
+ <input ng-model="rn"> <br><br>
+
+
+
+<label>Adhar No:</label>
+<input ng-model="adno">
+<br><br>
+
+
+
+
+
+
+<label style="padding-right: 32px;">Date of Birth : </label><input ng-model="dob"><br><br>
+
+
+
+		<td valign="top"><label style="padding-right: 65px;">Address : </label><input ng-model="add"><br><br>
+
+
+<label style="padding-right: 76px;">Phone : </label><input ng-model="ph"><br><br>
+
+
+		<td valign="top"><label style="padding-right: 77px;">Email : </label><input ng-model="email"><br><br>
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+	
+	
+	
+	
+
+
+
+
+
+
+<h3>Enter your details related <span ng-bind="edu"></span> : <br></h3></th><br><br>
+
+<label style="padding-right: 35px;">Year of passing SSC:  </label> <input ng-model="yssc"><br><br>
+
+
+	<label style="padding-right: 35px;">Year of passing HSC:  </label> <input ng-model="yhsc"><br><br>
+
+
+	<label style="padding-right: 25px;">Year of passing B.tech:  </label> <input ng-model="ybtech"><br><br>
+
+
+<label style="padding-right: 14px;">Percentage/Grade (SSC):  </label> <input ng-model="pgssc"><br><br>
+
+
+<label style="padding-right: 10px;">Percentage/Grade (HSC):  </label> <input ng-model="pghsc"><br><br>
+
+
+
+
+		<label>Percentage/Grade (B.tech):  </label> <input ng-model="pgbtech"><br><br>
+
+
+
+
+
+
+
+
+<!--
+<hr><br><label style="padding-right: 80px;">The font color of the input box will be whatever you write in the input field : </label><input ng-model="myCol"></input><br><br>
+<label style="padding-right: 25px;">The heading font color of the input box will be whatever you write in the input field : </label><input ng-model="myColh"></input><br><br>
+<label>The background font color of the input box will be whatever you write in the input field : </label><input ng-model="myCol2"></input><br><br><hr>
+-->
+
+<br><br>
+<div class="box">
+<h1 style ="text-align:center;color:{{myCol2}}">RESUME</font></b></h1>
+
+
+<h2> Information</h2>
+<table style="padding:15px; border=1;color:{{myCol}}">
+	<tr>
+		<td>Name
+		<td>:
+		<td>{{name}}
+	</tr>
+	<tr>
+		<td>Roll No:
+		<td>:
+		<td>{{rn}}
+	</tr>
+	<tr>
+		<td>Date of Birth
+		<td>:
+		<td>{{dob}}
+	</tr>
+	
+	<tr>
+		<td>Adhar No:
+		<td>:
+		<td>{{adno}}
+	</tr>
+	<tr>
+		<td valign="top">Address
+		<td valign="top">:
+		<td>{{add}}
+	</tr>
+	<tr>
+		<td>Phone
+		<td>:
+		<td>{{ph}}
+	</tr>
+	<tr>
+		<td valign="top">E-mail
+		<td valign="top">:
+		<td>{{email}}
+	</tr>
+</table>
+<h2>Educational Information</h2>
+
+
+<table style="width:80%; padding:15px; border=1;color:{{myCol}}">
+	<tr>
+		<th align="left">Degree/Qualification
+		<th align="left">Year
+		<th align="left">Percentage/Grade
+	
+	</tr>
+	<tr>
+		<td>SSC
+		<td>{{yssc}}
+		<td>{{pgssc}}
+		<td>{{bssc}}
+		<td>{{issc}}
+	</tr>
+	<tr>
+		<td>HSC
+		<td>{{yhsc}}
+		<td>{{pghsc}}
+		<td>{{bhsc}}
+		<td>{{ihsc}}
+	</tr>
+	<tr>
+		<td>B.Tech (CSE)
+		<td>{{ybtech}}
+		<td>{{pgbtech}}
+		<td>-
+		<td>{{ibtech}}
+	</tr>
+
+
+</table>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+  $scope.name = "Darji Yash";
+ $scope.adno = "1002112902";
+ $scope.rn = "19BCE031";
+ $scope.dob = "10th Jan,2002";
+$scope.lan= "Gujarati, Hindi, English";
+$scope.add= "Bunglow no. A / 103 Bhavna Tenament , vasna barrige road ,ahmedabad- 380007";
+$scope.ph= "+91 9812918291";
+$scope.email="yash10012002@gmail.com";
+$scope.yssc="2016-17";
+$scope.yhsc="2018-19";
+$scope.ybtech="2019-2023";
+$scope.pgssc="96.21";
+$scope.pghsc="98.62";
+$scope.pgbtech="-";
+$scope.s1="Teamwork"
+$scope.s2="Creativity"
+$scope.s3="Knowledge of Computer Languages such as : C,C++,Java,Python"
+$scope.s4="Problem Solving"
+
+});
+</script>
+</div>
+</body>
+</html>

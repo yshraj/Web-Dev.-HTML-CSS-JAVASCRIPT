@@ -1,0 +1,50 @@
+<html>
+  <head>
+  <title> JavaScript Array from Input</title>
+  <script>
+
+  var array = new Array();
+
+  function insert(val){
+  array[array.length]=val;
+  }
+
+  function show() {
+  var string="<b>All Element of the Array :</b><br>";
+  for(i = 0; i < array.length; i++) {
+  string =string+array[i]+"<br>";
+  }
+  if(array.length > 0)
+ document.getElementById('myDiv').innerHTML = string;
+  }
+  </script>
+  
+  </head>
+  
+  <body>
+  <h2>JavaScript Array from Input</h2>
+  <form name="form1">
+  <table width="407">
+  <tr>
+  <td width="154" align="right"><b>Name</b>
+  <td width="9"><b>&nbsp;:</b>
+  <td width="224">
+  <input type="text" name="name"/>
+  </tr>
+  <tr>
+  <td width="154" align="right">
+  <td width="9">
+  <td width="224">
+  </tr>
+  <tr>
+  <td width="154" align="right">
+  <td width="9">
+  <td width="224">
+  <input type="button" Value="Add Into Array" 
+ onclick="insert(this.form.name.value),show();"/>
+  </tr>
+  </table>
+  </form>
+  <div id="myDiv"></div>
+  </body>
+</html>

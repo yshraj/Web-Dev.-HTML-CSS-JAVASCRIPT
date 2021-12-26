@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function show(){
+
+var i, no, fact;
+fact=1;
+no=Number(document.getElementById("num").value);
+for(i=1; i<=no; i++)  
+{
+fact= fact*i;
+}  
+document.getElementById("answer").value= fact;
+}
+</script>
+</head>
+<body>
+
+<H3>
+6a. Write a JavaScript function that read an integer value and finds the
+factorial of the entered number.
+</H3>
+
+
+Enter Num: <input id="num"><BR>
+
+<button onclick="show()">Factorial</button><BR>
+<input id="answer">
+</body>
+</html>

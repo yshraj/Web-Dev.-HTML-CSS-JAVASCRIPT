@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>
+
+			6B:Create a JavaScript that merges two arrays without duplicating elements.
+
+		</title>
+
+<style>
+	html
+	{
+
+
+background: url(qq12.jpeg)
+	}
+	  button{
+	
+    padding: 16px;
+    font-family: "Times New Roman";
+    font-size: 26px;
+    color: background-color: white ; ;
+    background-color:#d3d3d3 ;
+    cursor: pointer;
+    border: 2;
+    border-radius: 22px;
+    
+  }
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  button:hover{
+    background-color: white ;
+  }
+
+	box {
+    padding: 12px;
+    width: 55%;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 0;
+  }
+
+
+ .box
+    {
+      width: 96%;
+	
+      border: 5px solid #b39800;
+      padding: 25px;
+    }
+    .box:hover
+    {
+border: 3px solid #b39800;
+      -moz-box-shadow: 0 0 25px #ccc;
+      -webkit-box-shadow: 0 0 25px #ccc;
+      box-shadow: 0 0 25px #ccc;
+    }
+    input {  
+  background-color: #b39800 ;  	
+  width: 40%;  
+  padding: 10px;
+     
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+<H3>
+6B:Create a JavaScript that merges two arrays without duplicating elements.	<BR><BR>	
+</H3>
+
+
+<script>
+var inp=[]
+var n;
+
+var array1 = []
+var array2 = [];
+var array3 = [];
+
+n = prompt("SIZE OF ARRAY:\n\n");
+
+document.write("SIZE OF Array IS :  "+ n + "\n\n\n");
+
+
+for(var i=0;i<n;i++){
+  
+  array1[i]= prompt('ARRAY 1 : index:'+(i+1));
+ 
+}
+
+
+
+for(var i=0;i<n;i++){
+  
+  array2[i]= prompt('ARRAY 2 : index:'+(i+1)+"\n\n");
+}
+
+
+document.write("<br>");
+
+document.write('Array1: '+array1+"\n\n");
+document.write("<br>");
+document.write('Array2: '+array2+"\n\n");
+document.write("<br>");
+for(var i=0;i<array1.length;i++){
+  if(array3.indexOf(array1[i]) == -1)
+     array3.push(array1[i])
+}
+for(var i=0;i<array2.length;i++){
+  if(array3.indexOf(array2[i]) == -1)
+     array3.push(array2[i])
+}
+document.write("<br>");document.write("<br>");
+document.write("\n\n"+"MERGED ARRAY:::  "+array3);
+
+
+</script>
+
+
+</body>
+
+
+</html>

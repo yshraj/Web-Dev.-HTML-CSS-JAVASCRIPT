@@ -1,0 +1,222 @@
+<html>  
+<head>
+<title>
+
+STUDENT REGISTRATION FORM
+
+</title>
+
+
+<style>
+body {
+  
+  background-repeat: no-repeat, repeat;
+  background-color: #cccccc;
+}
+
+
+.container {  
+    padding: 70px;  
+ background-color:#fff5d7;
+
+ background-image: url("qq12.jpeg");
+
+}  
+h1 { font-family: Candara;
+font-size: 50px;}
+
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;
+     
+}
+
+input[type=number], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;
+     
+}
+
+input[type=email], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;
+     
+} 
+
+input[type=DATE], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;
+     
+}   
+input[type=tel], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;
+     
+}
+/*
+ input[type=submit]{  
+  background-color: #4CAF50;    
+  padding: 16px;    
+  width: 100%;    
+}*/
+<!--
+
+.registerbtn {  
+  background-color: #4CAF50;    
+  padding: 16px;    
+  width: 100%;    
+}  -->
+
+
+</style>  
+</head>  
+<BODY > 
+
+<script type="text/javascript">
+ 
+
+//function a()
+//{
+//window.alert("THANK YOU FOR FEEDBACK: MR./MS. "+document.getElementById("n").value);
+//}
+
+function v(){  
+var name1=document.myform.fname.value;  
+var password=document.myform.password.value;  
+ window.alert("hh");  
+if (name1==null || name1==""){  
+  window.alert("Name can't be blank");  
+ // return false;  
+}else if(password.length<6){  
+  window.alert("Password must be at least 6 characters long.");  
+  //return false;  
+  }  
+}
+
+
+</script>
+
+
+<form name="myform" onsubmit="return validateform()" >  
+    <div class="container">
+  <center>  <h1> Student Registeration Form</h1> </center><br>  
+  <hr color="white"> <br>
+ 
+<!--<fieldset style="border-color:white">
+    <legend> ENTER NAME: </legend>
+-->
+<BR> 
+<label> ENTER NAME:</label> 
+<label> Firstname </label>   
+<input type="text" name="fname" placeholder= "Firstname">
+<br>
+<br>   
+<label> Middlename: </label>   
+
+<input type="text" name="middlename" placeholder="Middlename">   
+<br>
+<br>
+<label> Lastname: </label>    
+<input type="text" name="lastname" placeholder="Lastname">   
+<div>  
+<br>
+
+<br><label><b>Roll No:</b></label>  
+ <input type="text" placeholder="Enter Roll Number" name="rn"> <br>
+
+
+<BR> 
+<label> Adhar Card No:</label> <BR>
+<!--
+<input type="number" name="ADNO" placeholder= "ADHAR CARD NUMBER" max="999999999999"/>
+-->
+<input type="number" placeholder= "ADHAR CARD NUMBER" min="0" max="999999999999">
+<br>
+
+
+<BR>
+
+
+  <label for="BDAY">Birth Date:</label><BR>
+  <input type="date" id="datemax" name="datemax" max="2010-12-31"><br><br>
+
+
+<br><label><b>Email</b></label>  
+ <input type="email" placeholder="Enter Email Address" name="email"> <br>
+
+<br>  
+<label>   
+Phone :  
+</label>
+
+<input type="tel" id="phone" name="phone" placeholder="phone no." pattern="[0-9]{5}-[0-9]{5}">   
+
+<br><br><label>   
+Course :  
+</label>   
+<br>
+<select>  
+<option value="Course">Course</option>  
+<option value="BCA">BCA</option> 
+<option value="BCOM">BCA</option>
+<option value="CA">BCA</option> 
+<option value="BBA">BBA</option>  
+<option value="CS">BCA</option>
+<option value="B.Tech">B.Tech</option>  
+<option value="MBA">MBA</option>  
+<option value="MCA">MCA</option>  
+<option value="M.Tech">M.Tech</option>  
+</select>  
+</div>  
+<div>  <br>
+
+<label>   
+Gender :  
+</label><br>  
+<input type="radio" value="Male" name="gender" checked > Male   
+<input type="radio" value="Female" name="gender"> Female   
+<input type="radio" value="Other" name="gender"> Other  
+  
+</div>
+<br>  
+Current Address :  
+<textarea cols="80" rows="5" placeholder="Current Address" value="address">  
+</textarea>  
+ <br>
+ 
+  
+  
+<br>  <label><b>Password</b></label>  
+    <input type="password12" placeholder="Enter Password"><br><br>  
+  
+    <label><b>Re-type Password</b></label>  <br>
+
+    <input type="password122" placeholder="Retype Password"> <br> <br>
+
+
+
+
+<button type="reset" onclick="alert('RESET')" style="background-color: #F84D03 ;padding: 16px;width: 100%;">
+
+<font face = "Times New Roman" size = "3">
+R E S E T</font>
+</button>
+<br><br>
+<br><br><br><br>
+
+
+Password: <input type="password" name="password">
+<input type="submit" value="R e g i s t e r">  
+    <!--
+<button type="submit" onclick="v()" style="background-color: #F1B814;padding: 16px;width: 100%;">
+
+<font face = "Times New Roman" size = "4">
+R e g i s t e r</font>
+</button>-->
+<br><br>
+
+ 
+
+</form>  
+</body>  
+</html>  
